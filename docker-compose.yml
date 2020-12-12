@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+
+    rest-template-vs-web-client:
+        build:
+            context: ./rest-template-vs-web-client
+            dockerfile: ./Dockerfile
+        ports:
+            - 8080:8080
+            - 9990:9990
+            - 8787:8787
+        networks:
+            - local
+    
+    slow-application:
+        build:
+            context: ./slow-application
+            dockerfile: ./Dockerfile
+        ports:
+            - 3000:3000
+        networks:
+            - local
+
+networks:
+    local:
