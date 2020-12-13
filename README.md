@@ -9,6 +9,7 @@ This repository contains two simple application:
    - _/resttemplate/samples/{id}_: call the service exposed by slow-application using *RestTemplate*;
    - _/webclient/samples/{id}_: call the service exposed by slow-application using *WebClient*;
  - **slow-application**: a very simple node application in order to simulate a slow app (response time 2 seconds).
+ 
    _/samples/:id_ and return a json like this { id: 1, details : "Exmplae details"};
 
  ## Getting started
